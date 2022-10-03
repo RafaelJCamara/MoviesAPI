@@ -4,9 +4,8 @@ using IdentityServer4.Models;
 using IdentityServer4.Test;
 using System.Collections.Generic;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
-namespace IdentityServer.Configs
+namespace IdentityServer
 {
     public class Config
     {
@@ -27,8 +26,7 @@ namespace IdentityServer.Configs
                    {
                        ClientId = "movies_mvc_client",
                        ClientName = "Movies MVC Web App",
-                       AllowedGrantTypes = GrantTypes.Hybrid,
-                       RequirePkce = false,
+                       AllowedGrantTypes = GrantTypes.Code,
                        AllowRememberConsent = false,
                        RedirectUris = new List<string>()
                        {
@@ -45,11 +43,7 @@ namespace IdentityServer.Configs
                        AllowedScopes = new List<string>
                        {
                            IdentityServerConstants.StandardScopes.OpenId,
-                           IdentityServerConstants.StandardScopes.Profile,
-                           IdentityServerConstants.StandardScopes.Address,
-                           IdentityServerConstants.StandardScopes.Email,
-                           "movieAPI",
-                           "roles"
+                           IdentityServerConstants.StandardScopes.Profile
                        }
                    }
             };
@@ -63,20 +57,13 @@ namespace IdentityServer.Configs
         public static IEnumerable<ApiResource> ApiResources =>
           new ApiResource[]
           {
-               //new ApiResource("movieAPI", "Movie API")
           };
 
         public static IEnumerable<IdentityResource> IdentityResources =>
           new IdentityResource[]
           {
               new IdentityResources.OpenId(),
-              new IdentityResources.Profile(),
-              new IdentityResources.Address(),
-              new IdentityResources.Email(),
-              new IdentityResource(
-                    "roles",
-                    "Your role(s)",
-                    new List<string>() { "role" })
+              new IdentityResources.Profile()
           };
 
         public static List<TestUser> TestUsers =>
@@ -85,12 +72,12 @@ namespace IdentityServer.Configs
                 new TestUser
                 {
                     SubjectId = "5BE86359-073C-434B-AD2D-A3932222DABE",
-                    Username = "mehmet",
-                    Password = "swn",
+                    Username = "username",
+                    Password = "password",
                     Claims = new List<Claim>
                     {
-                        new Claim(JwtClaimTypes.GivenName, "mehmet"),
-                        new Claim(JwtClaimTypes.FamilyName, "ozkaya")
+                        new Claim(JwtClaimTypes.GivenName, "rafael"),
+                        new Claim(JwtClaimTypes.FamilyName, "camara")
                     }
                 }
             };
