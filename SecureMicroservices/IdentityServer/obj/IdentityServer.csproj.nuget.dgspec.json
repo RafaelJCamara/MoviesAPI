@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rafael\\Documents\\Projects\\MoviesAPI\\SecureMicroservices\\Movies.API\\Movies.API.csproj": {}
+    "C:\\Users\\Rafael\\Documents\\Projects\\MoviesAPI\\SecureMicroservices\\IdentityServer\\IdentityServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rafael\\Documents\\Projects\\MoviesAPI\\SecureMicroservices\\Movies.API\\Movies.API.csproj": {
+    "C:\\Users\\Rafael\\Documents\\Projects\\MoviesAPI\\SecureMicroservices\\IdentityServer\\IdentityServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafael\\Documents\\Projects\\MoviesAPI\\SecureMicroservices\\Movies.API\\Movies.API.csproj",
-        "projectName": "Movies.API",
-        "projectPath": "C:\\Users\\Rafael\\Documents\\Projects\\MoviesAPI\\SecureMicroservices\\Movies.API\\Movies.API.csproj",
+        "projectUniqueName": "C:\\Users\\Rafael\\Documents\\Projects\\MoviesAPI\\SecureMicroservices\\IdentityServer\\IdentityServer.csproj",
+        "projectName": "IdentityServer",
+        "projectPath": "C:\\Users\\Rafael\\Documents\\Projects\\MoviesAPI\\SecureMicroservices\\IdentityServer\\IdentityServer.csproj",
         "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafael\\Documents\\Projects\\MoviesAPI\\SecureMicroservices\\Movies.API\\obj\\",
+        "outputPath": "C:\\Users\\Rafael\\Documents\\Projects\\MoviesAPI\\SecureMicroservices\\IdentityServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,31 +40,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "IdentityServer4": {
               "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.InMemory": {
-              "target": "Package",
-              "version": "[5.0.17, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.17, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[5.0.17, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[5.0.2, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[4.1.2, )"
             }
           },
           "imports": [
