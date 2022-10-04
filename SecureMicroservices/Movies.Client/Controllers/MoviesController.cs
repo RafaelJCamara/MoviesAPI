@@ -169,10 +169,12 @@ namespace Movies.Client.Controllers
 
         public async Task Logout()
         {
-            //browser related
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            //identity server related
-            await HttpContext.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme);
+            ////browser related
+            //await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            ////identity server related
+            //await HttpContext.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme);
+            await HttpContext.SignOutAsync("Cookies");
+            await HttpContext.SignOutAsync("oidc");
         }
 
     }
