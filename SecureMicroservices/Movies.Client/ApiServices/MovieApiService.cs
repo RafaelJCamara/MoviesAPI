@@ -21,9 +21,21 @@ namespace Movies.Client.ApiServices
             throw new System.NotImplementedException();
         }
 
-        public Task<IEnumerable<Movie>> GetMovies()
+        public async Task<IEnumerable<Movie>> GetMovies()
         {
-            throw new System.NotImplementedException();
+            var movieList = new List<Movie>();
+            movieList.Add(new Movie
+            {
+                Id = 1,
+                Genre = "Comics",
+                Title = "a",
+                Rating = "a",
+                ImageUrl = "a",
+                ReleaseDate = System.DateTime.Now,
+                Owner = "rafael"
+            });
+
+            return await Task.FromResult(movieList);
         }
 
         public Task<Movie> UpdateMovie(Movie movie)
