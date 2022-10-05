@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityModel;
 using IdentityModel.Client;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -46,8 +47,6 @@ namespace Movies.Client
                 client.DefaultRequestHeaders.Add(HeaderNames.Accept, "application/json");
             }).AddHttpMessageHandler<AuthenticationDelegatingHandler>();
 
-
-
             services.AddHttpClient("IDPClient", client =>
             {
                 client.BaseAddress = new Uri("https://localhost:5005/");
@@ -75,10 +74,23 @@ namespace Movies.Client
 
                 options.Scope.Add("openid");
                 options.Scope.Add("profile");
+                options.Scope.Add("address");
+                options.Scope.Add("email");
+                options.Scope.Add("roles");
                 options.Scope.Add("movieAPI");
+
+                options.ClaimActions.MapUniqueJsonKey("role", "role");
 
                 options.SaveTokens = true;
                 options.GetClaimsFromUserInfoEndpoint = true;
+
+                //this makes sure that we have this two claims in ou token (if not, an error is thrown)
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    NameClaimType = JwtClaimTypes.GivenName,
+                    RoleClaimType = JwtClaimTypes.Role
+                };
+
             });
         }
 
