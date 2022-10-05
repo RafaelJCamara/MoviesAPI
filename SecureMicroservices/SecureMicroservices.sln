@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.API", "Movies.API\Movies.API.csproj", "{FEFAC3C2-713A-402F-9AA6-5C3973342E7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.API", "Movies.API\Movies.API.csproj", "{FEFAC3C2-713A-402F-9AA6-5C3973342E7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{712E104A-F48B-4E14-A38A-25290F42A4E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{712E104A-F48B-4E14-A38A-25290F42A4E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Client", "Movies.Client\Movies.Client.csproj", "{D0470136-6E1E-4462-99C6-22100C49F01C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Client", "Movies.Client\Movies.Client.csproj", "{D0470136-6E1E-4462-99C6-22100C49F01C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{ADFED79D-1B78-4AD5-9D19-447A051177BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D0470136-6E1E-4462-99C6-22100C49F01C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0470136-6E1E-4462-99C6-22100C49F01C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0470136-6E1E-4462-99C6-22100C49F01C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADFED79D-1B78-4AD5-9D19-447A051177BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADFED79D-1B78-4AD5-9D19-447A051177BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADFED79D-1B78-4AD5-9D19-447A051177BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADFED79D-1B78-4AD5-9D19-447A051177BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
